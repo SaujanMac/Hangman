@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hangman</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    // $(document).ready(function(){
+    //     $(".animatebtn").click(function(){
+    //         $(".container").animate({width: "0px"});
+    //         $(".answer-visible").animate({width: '250px'});
+    //     });
+    //     $(".changeQ").click(function(){
+    //         // $(".answer-visible").hide(slide);
+    //         $(".answer-visible").animate({width: '0px', height: '0px'});
+    //         $(".container").animate({width: "250px"});
+    //         // $(".container").show();
+    //     });
+    // });
+
+</script>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="content">
+                <h1>Question</h1>
+                <h3>Please enter the word.</h3>
+                <form action="#" class="questionForm">
+                    <input type="password" class="question" placeholder="Enter Here...">
+                    <input type="submit" class="questionBtn animatebtn" value="PLAY">
+                </form>
+            </div>
+        </div>
+        <div class="answer">
+            <div class="content2">
+            <h1>Guess The Letters</h1>
+            <p class="note">You have <span id="remainingTries">6</span> tries left.</p>
+            <p class="theWord"></p>
+            <form class="wordsForm" action="#">
+                <input type="text" class="enterLetter">
+                <input type="submit" class='btn' value='Submit'>
+            </form>
+            <p class="message"></p>
+            </div>
+        </div>
+    <button class="changeQ">Change Question</button>
+</div>
+    
+
+    
+    <!-- JS File Local -->
+    <script src="app.js"></script>
+</body>
+</html>

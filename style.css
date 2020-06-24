@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #000;
+    font-family: sans-serif;
+    color: #fff;
+}
+.main {
+    max-width: 500px;
+    margin: 50px auto;
+    position: relative;
+}
+.container {
+    background-color: #181818;
+    color: #fff;
+    width: 500px;
+    height: 500px;
+    border: solid 1px #333;
+    display: inline-block;
+}
+.container .content {
+    margin: 50px;
+}
+.container .content h1, .answer .content h1 {
+    font-family: 'Raleway';
+    text-align: center;
+    font-weight: 500;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.container .content h3, .answer .content h3 {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container .content form, .answer .content form {
+    margin: 10px;
+}
+.container .content form input.question, input.enterLetter {
+    display: block;
+    margin: 5px auto;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 80%;
+    padding: 5px;
+    border: 0;
+    outline: none;
+    background-color: #383838;
+    border-radius: 20px;
+}
+.container .content form input.question:focus, input.quesion:active, input.question:hover {
+    border: 1px solid #eee !important;
+    border-radius: 20px;
+}
+.container .content form input:focus::placeholder {
+    color: transparent;
+}
+.container .content form input.questionBtn, input.btn {
+    margin: 20px auto;
+    width: 50%;
+    padding: 10px;
+    display: block;
+    border: 0;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    background-color: #0cab00;
+}
+.answer {
+    background-color: #181818;
+    color: #fff;
+    width: 500px;
+    height: 500px;
+    border: solid 1px #333;
+    position: absolute;
+    left: 100vw;
+    display: none;
+}
+.answer-visible {
+    background-color: #181818;
+    color: #fff;
+    width: 500px;
+    height: 500px;
+    border: solid 1px #333;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+}
+.content2 {
+    margin: 100px;
+}
+
+input.enterLetter:focus, input.enterLetter:active, input.enterLetter:hover {
+    border: 1px solid #eee !important;
+    border-radius: 20px;
+}
+input.enterLetter:focus, input.enterLetter:active, input.enterLetter:hover {
+    border: 1px solid #eee !important;
+    border-radius: 20px;
+}
+
+
+.changeQ {
+    visibility: hidden;
+    margin: 1rem;
+}
