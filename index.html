@@ -6,20 +6,17 @@
     <link rel="stylesheet" href="style.css">
     <title>Hangman</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-    // $(document).ready(function(){
-    //     $(".animatebtn").click(function(){
-    //         $(".container").animate({width: "0px"});
-    //         $(".answer-visible").animate({width: '250px'});
-    //     });
-    //     $(".changeQ").click(function(){
-    //         // $(".answer-visible").hide(slide);
-    //         $(".answer-visible").animate({width: '0px', height: '0px'});
-    //         $(".container").animate({width: "250px"});
-    //         // $(".container").show();
-    //     });
-    // });
-
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".animatebtn").click(function(){
+            $(".answer").animate({left: "-50vw"});
+            $(".container").animate({left: "-200vw"}); 
+        });
+        $(".changeQ").click(function() {
+            $(".answer").animate({left: "100vw"});
+            $(".container").animate({left: "-50vw"});
+        })
+    });
 </script>
 </head>
 <body>
@@ -40,13 +37,14 @@
             <p class="note">You have <span id="remainingTries">6</span> tries left.</p>
             <p class="theWord"></p>
             <form class="wordsForm" action="#">
-                <input type="text" class="enterLetter">
+                <input type="text" class="enterLetter" onkeypress="checkLetter()">
                 <input type="submit" class='btn' value='Submit'>
             </form>
             <p class="message"></p>
+            <button class="changeQ">Change Question</button>
             </div>
         </div>
-    <button class="changeQ">Change Question</button>
+
 </div>
     
 

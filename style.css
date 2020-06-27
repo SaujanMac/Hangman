@@ -8,6 +8,8 @@ body {
     background: #000;
     font-family: sans-serif;
     color: #fff;
+    min-width: 200vw;
+    overflow: hidden;
 }
 .main {
     max-width: 500px;
@@ -19,6 +21,8 @@ body {
     color: #fff;
     width: 500px;
     height: 500px;
+    position: absolute;
+    left: -50vw;
     border: solid 1px #333;
     display: inline-block;
 }
@@ -40,7 +44,7 @@ body {
 .container .content form, .answer .content form {
     margin: 10px;
 }
-.container .content form input.question, input.enterLetter {
+.container .content form input.question {
     display: block;
     margin: 5px auto;
     color: #fff;
@@ -79,34 +83,64 @@ body {
     border: solid 1px #333;
     position: absolute;
     left: 100vw;
-    display: none;
-}
-.answer-visible {
-    background-color: #181818;
-    color: #fff;
-    width: 500px;
-    height: 500px;
-    border: solid 1px #333;
-    position: absolute;
-    left: 0;
-    top: 0;
     display: inline-block;
 }
 .content2 {
     margin: 100px;
 }
-
-input.enterLetter:focus, input.enterLetter:active, input.enterLetter:hover {
-    border: 1px solid #eee !important;
+.content2 h1 {
+    text-align: center;
+}
+.content2 p.note {
+    margin: 20px 10px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.content2 p.theWord {
+    margin-top: 10px;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+input.enterLetter {
+    display: block;
+    margin: 20px auto;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 80%;
+    padding: 5px;
+    border: 0;
+    outline: none;
+    transform: scale(1,1);
+    background-color: #383838;
     border-radius: 20px;
+    transition: all 0.5s ease-in-out;
 }
 input.enterLetter:focus, input.enterLetter:active, input.enterLetter:hover {
     border: 1px solid #eee !important;
     border-radius: 20px;
+} 
+input.enterLetter:focus, input.enterLetter:active, input.enterLetter:hover {
+    border: 1px solid #eee !important;
+    border-radius: 20px;
+}
+.inputdisabled {
+    transform: scale(0,0);
+    transition: all 0.5s ease-in-out;
 }
 
-
-.changeQ {
+.answer.content2.changeQ {
     visibility: hidden;
-    margin: 1rem;
+    margin: 20px auto;
+    width: 50%;
+    padding: 10px;
+    display: block;
+    border: 0;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    background-color: #0cab00;
 }
+ 

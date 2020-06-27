@@ -41,13 +41,14 @@ UIQuestionForm.addEventListener('submit', function(a) {
         answerArr[i] = '_';
     }
     s = answerArr.join(" "); //putting the array on a string.
-    answerContainer.className = 'answer-visible';
+    // answerContainer.className = 'answer-visible';
     answerBoxUI.innerHTML = s; //printing that string on HTML DOM
 });
 
 UIform.addEventListener('submit', function (b) {
     b.preventDefault();
     let insertChar = enterLetterBox.value;
+    console.log('The length of the input is ' +enterLetterBox.value.length);
     //check if the letter is in the letters array or not
     if (letters.includes(insertChar) == false) {
         console.log('not in array');
@@ -86,12 +87,22 @@ UIform.addEventListener('submit', function (b) {
     console.log(letters);
     console.log(typeof(questionString));
     if (answerString === questionString) {
-        remTries.parentElement.textContent = 'Winner';
+        remTries.parentElement.style.display='none';
+        $(".enterLetter").hide();
+        document.querySelector('input.btn').value='WINNER';
+        document.querySelector('input.btn').disabled='true';
     }
     
 });
 
-
+function checkLetter(a) {
+    if (enterLetterBox.value.length > 1) {
+        enterLetterBox.value="";
+        const warn = document.createElement('div');
+        warn.className = 'warning';
+        warn.innerText="You can only input 1 letter at a time.";
+    }
+}
 
 //Messaging function
 // function setMessage(msg) {
