@@ -9,13 +9,13 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $(".animatebtn").click(function(){
-            $(".answer").animate({left: "-50vw"});
-            $(".container").animate({left: "-200vw"}); 
+            $(".answer").animate({left: "0%"});
+            $(".container").animate({left: "-100vw"}); 
         });
         $(".changeQ").click(function() {
             $(".answer").animate({left: "100vw"});
-            $(".container").animate({left: "-50vw"});
-        })
+            $(".container").animate({left: "0%"});
+        });
     });
 </script>
 </head>
@@ -37,11 +37,12 @@
             <p class="note">You have <span id="remainingTries">6</span> tries left.</p>
             <p class="theWord"></p>
             <form class="wordsForm" action="#">
-                <input type="text" class="enterLetter" onkeypress="checkLetter()">
+                <input type="text" class="enterLetter" maxlength="1">
                 <input type="submit" class='btn' value='Submit'>
             </form>
             <p class="message"></p>
             <button class="changeQ">Change Question</button>
+            <a href="http://localhost:5500/" class="playAgain">Play Again</a>
             </div>
         </div>
 
