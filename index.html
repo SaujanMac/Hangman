@@ -17,10 +17,26 @@
             $(".container").animate({left: "0%"});
         });
     });
+    //fade in
+    $(document).ready(function(){
+    $(".button").click(function(){
+      $(".info h1").fadeIn(2500);
+      $(".info h3").fadeIn(2500);
+      $(".info ul").delay(2500).fadeIn(2500);
+      $('.container').delay(2000).animate({top: "50%"},1000);
+    });
+});
 </script>
 </head>
 <body>
-    <div class="main">
+    <!-- LANDING PAGE -->
+    <div class="intro">
+        <h1>Hangman</h1>
+        <div class="logo"></div>
+        <a class="button" href="#main">START GAME</a>
+    </div>
+    <!-- MAIN CONTENT -->
+    <div id="main">
         <div class="container">
             <div class="content">
                 <h1>This Mofo</h1>
@@ -31,6 +47,19 @@
                 </form>
             </div>
         </div>
+        <div class="animsition">
+        <div class="info">
+            <h1>New Hangman.</h1>
+            <h3>Welcome To Hangman. A game for all ages, play with the AI or play with your friends. Guess the letters of the word to win the game.</h3>
+            <ul>
+                <li><strong>Rules</strong></li>
+                <li>You can enter only one letter at a time</li>
+                <li>You can give only one hint at a time</li>
+                <li>Only one word is allowed.</li>
+                <li>The word can be anything.</li>
+            </ul>
+        </div>
+    </div>
         <div class="answer">
             <div class="content2">
             <h1>Guess The Letters</h1>
